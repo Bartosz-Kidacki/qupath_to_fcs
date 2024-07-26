@@ -22,7 +22,7 @@ library(stringi)
 
 ##------------------------------------------------------ config
 # limit of upload file size, set to 300 Mb if needed.
-options(shiny.maxRequestSize=100*1024^2)
+options(shiny.maxRequestSize=300*1024^2)
 
 ##------------------------------------------------------ APP UI
 ui <- fluidPage(
@@ -36,7 +36,7 @@ ui <- fluidPage(
     sidebarPanel(
       helpText("Hello everyone, this is a new version of this app, please let me know if you have any issues in the issues tab in github, or at gascui@lji.org "),
       helpText("Upload your TXT measurements files from QuPath 0.4.0"),
-      helpText("Maximum file size, 100 MB"),
+      helpText("Maximum file size, 300 MB"),
       fileInput("file1", "Choose QuPath TXT File",
                 accept = c(
                   "text/txt",
